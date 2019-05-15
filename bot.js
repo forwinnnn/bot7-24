@@ -82,7 +82,7 @@ client.on('message', msg => {
   if (msg.content.toLowerCase() === 'sa') {
     msg.channel.sendMessage('Aleyküm Selam Hoş Geldin');
   }
-
+});
 client.elevation = message => {
   if(!message.guild) {
 	return; }
