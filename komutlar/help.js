@@ -5,10 +5,10 @@ exports.run = function(client, message, args) {
     let type = args.slice(0).join(' ');
     if (type.length < 1) return message.channel.send(
 new Discord.RichEmbed()
-.setDescription('Kullanım: f!yardım <-yardım istediğiniz konu>'));
+.setDescription('Kullanım: f!destek <-destek istediğiniz konu>'));
 const embed = new Discord.RichEmbed()
 .setColor('RANDOM')
-.setDescription('Yardım istediğiniz konu yetkililere ulaştı!')
+.setDescription('Destek istediğiniz konu yetkililere ulaştı!')
 message.channel.send(embed)
 const embed2 = new Discord.RichEmbed()
 .setColor("RANDOM")
@@ -28,7 +28,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'yetkili yardım',
+  name: 'destek',
   description: 'Yetkililerden yardım istersiniz',
-  usage: 'yetkili yardım <Yardım istediğiniz konu>'
+  usage: 'Destek <Yardım istediğiniz konu>'
 };
