@@ -80,8 +80,10 @@ client.unload = command => {
 
 client.on('message', msg => {
   if (msg.content.toLowerCase() === 'sa') {
-    msg.channel.sendMessage('Aleyküm Selam Hoş Geldin!!');
-  }
+		if (!msg.guild.member(msg.author).hasPermission("BAN_MEMBERS")) {
+			msg.author.sendMessage('Aleyküm selam,  hoş geldin ^^'); 
+		}
+	}
 });
 
 client.elevation = message => {
