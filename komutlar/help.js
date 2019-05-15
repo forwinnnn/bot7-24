@@ -28,7 +28,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'öneri',
+  name: 'yetkili yardım',
   description: 'Yetkililerden yardım istersiniz',
   usage: 'yetkili yardım <Yardım istediğiniz konu>'
 };
