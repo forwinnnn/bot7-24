@@ -7,18 +7,14 @@ var prefix = ayarlar.prefix;
 
 module.exports = client => {
 var oyun = [
-        "t!yardım - Otorol Güncellendi🔥",
-        "t!yardım - Küfür Engel✨",
-        "t!yardım - Reklam Engel⭐️",
-        "t!yardım - +hoşgeldin-ayarla Güncellendi💥",
-        "t!yardım - +slowmode 🌹",
-        "t!yardım - Beni Sunucuna Ekle⚡️",
-        "t!yardım - +sunucunutanıt YENİ🍂 ",
-        "t!yardım - +talep YENİ📫 ",
-        "t!yardım - +düello Yeni 🤛",
-        "t!yardım - +sayaç Yeni 👑",
-        "t!kayıtlar-ayarla - Yeni"
-  
+        "Kurucu For Win🔥",
+        "Reklam Yapma✨",
+        "Saygılı Ol⭐️",
+        "For Win'e Özelden Yazarak Kendine Özel Bot Yaprıra Bilirsin💥",
+        "Sizi Seviyorum🌹",
+        "Film Önerileri İçin 🎥fi̇lm-önerileri🎥 Kanalına Gidiniz⚡️",
+        "Arkadaş Edin🍂 ",
+        "Bota Ve Sunucuya Bir Şey Önermek İstiyorsan f!öneri📫 ",
     ];
 
     setInterval(function() {
