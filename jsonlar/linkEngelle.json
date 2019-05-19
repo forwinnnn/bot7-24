@@ -1,1 +1,1 @@
-{}
+{let linkEngel = JSON.parse(fs.readFileSync("././jsonlar/linkEngelle.json", "utf8"));}
