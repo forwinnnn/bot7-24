@@ -84,7 +84,7 @@ client.on('message', msg => {
   }
 });
 client.on('message', msg => {
-  if (msg.content === '/discord.gg http .gg .com .net .org invite İnstagram Facebook watch Youtube youtube facebook instagram/') {
+  if (msg.content === 'discord.gg') {
    msg.delete(30)
     msg.reply('Reklam Engellendi');
   }
