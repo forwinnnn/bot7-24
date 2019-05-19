@@ -1,10 +1,10 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const ayarlar = require('./ayarlar.json');
+const ayarlar = require('./ayarlar.son');
 const chalk = require('chalk');
 const fs = require('fs');
-const moment = require('moment');
 let linkEngel = JSON.parse(fs.readFileSync("././jsonlar/linkEngelle.json", "utf8"));
+const moment = require('moment');
 require('./util/eventLoader')(client);
 
 var prefix = ayarlar.prefix;
