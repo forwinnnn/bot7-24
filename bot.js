@@ -83,6 +83,7 @@ client.on('message', msg => {
     msg.channel.sendMessage('Aleyküm Selam Hoş Geldin');
   }
 });
+let linkEngel = JSON.parse(fs.readFileSync("././jsonlar/linkEngelle.json", "utf8"));
 client.on("message", msg => { 
 if (!linkEngel[msg.guild.id]) return;
 if (linkEngel[msg.guild.id].linkEngel === "kapali") return;
