@@ -1,6 +1,3 @@
-Ghostbin will be shutting down in May 2019.
-Until then, all newly-created pastes will expire in 48 hours.
-If you'd like an archive of your pastes, go here.
 const Discord = require('discord.js');
 const fs = require('fs');
 let linkEngel = JSON.parse(fs.readFileSync("././jsonlar/linkEngelle.json", "utf8"));
