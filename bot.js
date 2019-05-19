@@ -84,7 +84,7 @@ client.on('message', msg => {
   }
 });
 client.on('message', msg => {
-  if (msg.content === 'https://discord.gg/') {
+  if (msg.content === 'https://discord.gg') {
    msg.delete(30)
     msg.reply('Reklam Engellendi');
   }
