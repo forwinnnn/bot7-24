@@ -84,7 +84,6 @@ client.on('message', msg => {
   }
 });
 client.on("message", msg => {
-let linkEngel = JSON.parse(fs.readFileSync("././jsonlar/linkEngelle.json", "utf8"));
 if (!linkEngel[msg.guild.id]) return;
 if (linkEngel[msg.guild.id].linkEngel === "kapali") return;
     if (linkEngel[msg.guild.id].linkEngel === "acik") {
