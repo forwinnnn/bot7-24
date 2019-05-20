@@ -1,33 +1,21 @@
 const Discord = require('discord.js');
-const request = require('node-superfetch');
-const db = require('quick.db');
-const { stripIndents } = require('common-tags');
-const snekfetch = require("snekfetch");
-
-exports.run = async (client, message, args) => {
-db.fetch(`usohbet_${message.channel.id}`).then(usdurum => {
-if(!usdurum || usdurum === 'pasif') usdurum = "Pasif"
-if(!args[0]) return message.channel.send('Ultra Sohbet Temizleme Modu Şu Anda ' + usdurum + '\nBu Özelliği Açmak Veya Kapatmak için ``aç`` veya ``kapat`` yazmalısın')
+exports.run = function(client, message, args) {
+if(!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Bu Komutu Kullanmak İçin İzniniz Yok!");
+if(!args[0]) return message.channel.send("**Lütfen Silinicek Mesaj Miktarını Yazın.!**");
+message.channel.bulkDelete(args[0]).then(() => {
+  message.channel.send(` ${args[0]} Adet Mesajı Sildim.`).then(msg => msg.delete(5000));
 })
-  if(args[0] === 'aç') {
-    db.set(`usohbet_${message.channel.id}`,'aktif')
-    message.channel.send('**Özellik Bu Kanalda Açıldı**')
-    }
-  else if (args[0] === 'kapat') {
-    db.set(`usohbet_${message.channel.id}`,'pasif')
-    message.channel.send('**Özellik Bu Kanalda Kapatıldı**')
-  }
 }
 
 exports.conf = {
   enabled: true,
-  guildOnly: false,
-  aliases: ['ultrasohbettemizleyici'],
-  permLevel: 0,
+  guildOnly: true,
+  aliases: ['sil'],
+  permLevel: 2
 };
 
 exports.help = {
   name: 'sil',
-  description: 'Belirtilen miktarda mesaj siler',
-  usage: 'sil'
+  description: 'Belirlenen miktarda mesajı siler.',
+  usage: 'sil <silinicek mesaj sayısı>'
 };
