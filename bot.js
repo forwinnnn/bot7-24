@@ -3,6 +3,7 @@ const client = new Discord.Client();
 const ayarlar = require('./ayarlar.json');
 const chalk = require('chalk');
 const fs = require('fs');
+const db = require('quick.db');
 let linkEngel = JSON.parse(fs.readFileSync("././jsonlar/linkEngelle.json", "utf8"));
 const moment = require('moment');
 require('./util/eventLoader')(client);
