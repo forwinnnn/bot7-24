@@ -30,3 +30,4 @@ exports.help = {
   name: 'sil',
   description: 'Belirtilen miktarda mesaj siler',
   usage: 'sil'
+};
