@@ -83,6 +83,15 @@ client.on('message', msg => {
   if (msg.content.toLowerCase() === 'sa') {
     msg.channel.sendMessage('Aleyküm Selam Hoş Geldin');
   }
+
+client.on("message",message => {
+  if(!message.author.bot) return;
+  db.fetch(`usohbet_${message.channel.id}`).then(usdurum => {
+    if(!usdurum || usdurum === 'pasif') return;
+    else {
+      message.delete(5000)
+    }
+})})	
 });
 
 client.on("message", msg => { 
