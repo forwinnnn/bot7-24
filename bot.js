@@ -3,7 +3,6 @@ const client = new Discord.Client();
 const ayarlar = require('./ayarlar.json');
 const chalk = require('chalk');
 const fs = require('fs');
-let linkEngel = JSON.parse(fs.readFileSync("././jsonlar/linkEngelle.json", "utf8"));
 const moment = require('moment');
 require('./util/eventLoader')(client);
 
@@ -84,26 +83,6 @@ client.on('message', msg => {
     msg.channel.sendMessage('Aleyküm Selam Hoş Geldin');
   }	
 });
-
-client.on("message", msg => { 
-if (!linkEngel[msg.guild.id]) return;
-if (linkEngel[msg.guild.id].linkEngel === "kapali") return;
-    if (linkEngel[msg.guild.id].linkEngel === "acik") {
-    var regex = new RegExp(/(discord.gg|http|.gg|.com|.net|.org|invite|İnstagram|Facebook|watch|Youtube|youtube|facebook|instagram)/)
-    if (regex.test(msg.content)== true) {
-    if (!msg.member.hasPermission("ADMINISTRATOR")) {
-      msg.delete()
-       msg.channel.send(`<@${msg.author.id}>`).then(message => message.delete(5000));
-        var e = new Discord.RichEmbed()
-        .setColor("RANDOM")
-        .setAuthor("Link Engeli!")
-        .setDescription(`Bu sunucuda linkler **${client.user.username}** tarafından engellenmektedir! Link atmana izin vermeyeceğim!`)
-        msg.channel.send(e).then(message => message.delete(5000));
-    }
-}
-    }
-});
-
 client.elevation = message => {
   if(!message.guild) {
 	return; }
