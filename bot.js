@@ -2,7 +2,6 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const ayarlar = require('./ayarlar.json');
 const chalk = require('chalk');
-const db = require('quick.db');
 const fs = require('fs');
 const moment = require('moment');
 require('./util/eventLoader')(client);
