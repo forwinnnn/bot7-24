@@ -2,6 +2,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 const ayarlar = require('./ayarlar.json');
 const chalk = require('chalk');
+const db = require('quick.db');
 const fs = require('fs');
 const moment = require('moment');
 require('./util/eventLoader')(client);
@@ -77,6 +78,18 @@ client.unload = command => {
     }
   });
 };
+
+client.on("guildMemberAdd", async member => {
+  let sayac = JSON.parse(fs.readFileSync("./ayarlar/sayac.json", "utf8"));
+  const channel = member.guild.channels.find("name", "sayaç")
+  channel.send(`**${sayac[member.guild.id].sayi}** kişi olmamıza son **${sayac[member.guild.id].sayi - member.guild.members.size}** kişi kaldı!`)
+})
+
+client.on("guildMemberRemove", async member => {
+  let sayac = JSON.parse(fs.readFileSync("./ayarlar/sayac.json", "utf8"));
+  const channel = member.guild.channels.find("name", "sayaç")
+  channel.send(`**${sayac[member.guild.id].sayi}** kişi olmamıza son **${sayac[member.guild.id].sayi - member.guild.members.size}** kişi kaldı!`)
+})
 
 client.on('message', msg => {
   if (msg.content.toLowerCase() === 'sa') {
