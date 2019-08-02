@@ -13,15 +13,15 @@ errors: ['time'],
 })
 .then((collected) => {
           message.guild.createChannel(`ÖNEMLİ KANALLAR`, 'category');
-          message.guild.createChannel(`💎-kurallar`);
-        message.guild.createChannel(`💎-duyuru`);
+          message.guild.createChannel(`kurallar`);
+        message.guild.createChannel(`duyuru`);
             message.guild.createChannel(`Sohbet Kanalları`, 'category');
-          message.guild.createChannel(`💎-oylama`);
-        message.guild.createChannel(`💎-Sohbet`);
-          message.guild.createChannel(`💎-bot-komut`);
-            message.guild.createChannel(`💎-foto-gif`);
-              message.guild.createChannel(`💎-nsfw`);
-              message.guild.createChannel(`💎-gelen-giden`);
+          message.guild.createChannel(`oylama`);
+        message.guild.createChannel(`Sohbet`);
+          message.guild.createChannel(`bot-komut`);
+            message.guild.createChannel(`foto-gif`);
+              message.guild.createChannel(`nsfw`);
+              message.guild.createChannel(`gelen-giden`);
               message.guild.createChannel(`mod-log`);
           message.guild.createChannel(`Ses Kanalları`, 'category')
         message.guild.createChannel(`╠ ● ɢeɴel ѕoнвeт ①`, 'voice');
