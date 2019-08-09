@@ -20,7 +20,6 @@ errors: ['time'],
         message.guild.createChannel(`Sohbet`);
           message.guild.createChannel(`bot-komut`);
             message.guild.createChannel(`foto-gif`);
-              message.guild.createChannel(`nsfw`);
               message.guild.createChannel(`gelen-giden`);
               message.guild.createChannel(`mod-log`);
           message.guild.createChannel(`Ses Kanalları`, 'category')
