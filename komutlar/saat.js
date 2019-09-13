@@ -2,9 +2,9 @@ const Discord = require('discord.js')
 
 exports.run = (client, message, params) => {
 const embed = new Discord.RichEmbed()
-.setTitle(':flag_tr: Türkiyemizin Saati Aşağida Yazmaktadir')
+.setTitle(':flag_tr: Türkiye Saati Aşağida Yazmaktadir')
 .setTimestamp()
-.setFooter('Türkiyemizin Saati ->')
+.setFooter('Türkiye Saati ->')
 .setColor(0xff7f00)
 
 message.channel.sendMessage(embed)
