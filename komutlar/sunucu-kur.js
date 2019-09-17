@@ -12,7 +12,7 @@ time: 30000,
 errors: ['time'],
 })
 .then((collected) => {
-          message.guild.createChannel(`ÖNEMLİ KANALLAR`, 'category');
+          message.guild.createChannel(`Önemli Kanallar`, 'category');
           message.guild.createChannel(`kurallar`);
         message.guild.createChannel(`duyuru`);
             message.guild.createChannel(`Sohbet Kanalları`, 'category');
@@ -29,10 +29,10 @@ errors: ['time'],
         message.guild.createChannel(`╠ ● ɢeɴel ѕoнвeт ④`, 'voice');
         message.guild.createChannel(`╠ ● ɢeɴel ѕoнвeт ⑤`, 'voice');
         message.guild.createChannel(`Müzik Kanalları`, 'category')
-        message.guild.createChannel(`  ♫ Müzik Odası`, 'voice');
-        message.guild.createChannel(`  ♫ Müzik Odası`, 'voice');
-        message.guild.createChannel(`  ♫ Müzik Odası`, 'voice');
-        message.guild.createChannel(`  ♫ Müzik Odası`, 'voice');
+        message.guild.createChannel(`╠ ♫ Müzik Odası`, 'voice');
+        message.guild.createChannel(`╠ ♫ Müzik Odası`, 'voice');
+        message.guild.createChannel(`╠ ♫ Müzik Odası`, 'voice');
+        message.guild.createChannel(`╠ ♫ Müzik Odası`, 'voice');
         message.guild.createChannel(`╠ ● AFK`, 'voice');
 
 
